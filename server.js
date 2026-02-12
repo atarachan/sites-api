@@ -1,3 +1,16 @@
+/********************************************************************************
+*  WEB422 – Assignment 1 
+* 
+*  I declare that this assignment is my own work in accordance with Seneca's
+*  Academic Integrity Policy:
+* 
+*  https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
+* 
+*  Name: Aidan Tarachan Student ID: 102673233 Date: 2026-02-11
+*
+*  Published URL (of the API) on Vercel:  https://sites-api-flax.vercel.app/
+*
+********************************************************************************/
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -12,11 +25,13 @@ app.use(cors());
 const dataService = require("./data-service.js"); 
 
 app.get('/', (req, res) => {
-    res.json({message: 'API Listening', 
+    res.sendFile(path.join(__dirname, "index.html"));
+
+    /*res.json({message: 'API Listening', 
         term: 'Winter 2026', 
         student: 'Aidan Tarachan',
         learnID: 'atarachan'
-    });
+    });*/
 });
 
 app.post('/api/sites', async (req, res) => {
