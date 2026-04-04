@@ -14,6 +14,9 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
+
 const HTTP_PORT = process.env.PORT || 8080;
 
 const cors = require('cors');
@@ -23,6 +26,7 @@ app.use(express.json());
 app.use(cors());
 
 const dataService = require("./data-service.js"); 
+const userService = require("./user-service.js");
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
