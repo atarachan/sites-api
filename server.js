@@ -8,7 +8,7 @@
 * 
 *  Name: Aidan Tarachan Student ID: 102673233 Date: 2026-04-06
 *
-*  Vercel API (Deployed) Link: _____________________________________________________
+*  Vercel API (Deployed) Link: https://sites-api-av17.vercel.app/
 *
 ********************************************************************************/ 
 
