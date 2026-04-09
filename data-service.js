@@ -19,25 +19,10 @@ module.exports.initialize = function () {
 
       db.once('open', () => {
           Site = db.model("sites", siteSchema);
-          // User = db.model("users", userSchema);
+          User = db.model("users", userSchema);
           resolve();
       });
   });
-};
-
-module.exports.connect = function () {
-    return new Promise(function (resolve, reject) {
-        let db = mongoose.createConnection(mongoDBConnectionString);
-
-        db.on('error', err => {
-            reject(err);
-        });
-
-        db.once('open', () => {
-            User = db.model("users", userSchema);
-            resolve();
-        });
-    });
 };
 
 module.exports.addNewSite = async function (data)  {
