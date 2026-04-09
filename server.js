@@ -100,7 +100,7 @@ app.post("/api/user/register", (req, res) => {
     .then((msg) => {
         res.json({ "message": msg });
     }).catch((msg) => {
-        res.status(422).json({ message: err.toString() });
+        res.status(422).json({ message: msg.toString() });
     });
 });
 
